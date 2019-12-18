@@ -1,0 +1,36 @@
+package com.nobelit.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import com.nobelit.hibernate.model.Book;
+import com.nobelit.hibernate.util.HibernateUtil;
+
+public class HibernateTest {
+	public static void main(String[] args) {
+
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+
+		Session session = sessionFactory.openSession();
+
+		BookService bookservice = new BookService();
+		Book book = BookService.getBookById(2);
+		System.out.println(book);
+		
+		for(Book book1: BookService.getAllBooks())
+			System.out.println(book);
+		
+		
+		
+		List<Object[]> Books =
+		
+		for (Book book1:bookservice.getAllBooks())
+			System.out.println(book);
+		
+		session.close();
+
+		HibernateUtil.shutdown();
+	}
+}

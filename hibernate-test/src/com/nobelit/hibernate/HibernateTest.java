@@ -8,10 +8,11 @@ import com.nobelit.hibernate.util.HibernateUtil;
 
 public class HibernateTest {
 	public static void main(String[] args) {
-
+		
+		
+		
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
-		
 		Session session = sessionFactory.openSession();
 
 		Transaction txn = session.beginTransaction();
